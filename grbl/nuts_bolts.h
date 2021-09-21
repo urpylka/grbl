@@ -2,8 +2,8 @@
   nuts_bolts.h - Header file for shared definitions, variables, and functions
   Part of Grbl
 
-  Copyright (c) 2011-2015 Sungeun K. Jeon 
-  Copyright (c) 2009-2011 Simen Svale Skogsrud 
+  Copyright (c) 2011-2015 Sungeun K. Jeon
+  Copyright (c) 2009-2011 Simen Svale Skogsrud
 
   Grbl is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
@@ -22,12 +22,12 @@
 #ifndef nuts_bolts_h
 #define nuts_bolts_h
 
-#define false 0
-#define true 1
+#define false 0  // BlueOrangeLive wegen Arduino IDE Fehler auskommentiert
+#define true 1   // BlueOrangeLive wegen Arduino IDE Fehler auskommentiert 
 
 // Axis array index values. Must start with 0 and be continuous.
 #define N_AXIS 3 // Number of axes
-#define X_AXIS 0 // Axis indexing value. 
+#define X_AXIS 0 // Axis indexing value.
 #define Y_AXIS 1
 #define Z_AXIS 2
 // #define A_AXIS 3
@@ -55,14 +55,14 @@
 #define min(a,b) (((a) < (b)) ? (a) : (b))
 
 // Bit field and masking macros
-#define bit(n) (1 << n) 
+#define bit(n) (1 << n)
 #define bit_true(x,mask) (x) |= (mask)
 #define bit_false(x,mask) (x) &= ~(mask)
 #define bit_istrue(x,mask) ((x & mask) != 0)
 #define bit_isfalse(x,mask) ((x & mask) == 0)
 
-// Read a floating point value from a string. Line points to the input buffer, char_counter 
-// is the indexer pointing to the current character of the line, while float_ptr is 
+// Read a floating point value from a string. Line points to the input buffer, char_counter
+// is the indexer pointing to the current character of the line, while float_ptr is
 // a pointer to the result variable. Returns true when it succeeds
 uint8_t read_float(char *line, uint8_t *char_counter, float *float_ptr);
 

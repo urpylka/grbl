@@ -1,5 +1,27 @@
 ![GitHub Logo](/doc/media/Grbl Logo 250px.png)
 
+***
+
+_**This is the development branch for Grbl v1.0's upcoming release. In general, the new features here are beta, so use with caution. If you'd like to help, please report any bugs or oddities that you find! Thanks!**_
+
+
+_**Test for an ESC Brushless Spindle (ESC - Servo). They needed another timing and other starting conditions.**_
+
+Changes in the following files:
+
+config.h - Added My Defaults
+
+defaults.h - Start parameters for Brushless Spindle added.
+
+cpu_map.h - 488Hz 0X05 set Prescaler
+
+spindel_control.c - See the file.
+
+My Arduino IDE Version 1.7.10 (arduino.org)
+
+Import library - - grbl as a library in the MENU under Sketch Add Library - grbl folder selecting OK
+
+With grbl Upload.ino Uploading. (Grbl Upload.ino can be found in / grbl / example / grblUpload /.)
 
 ***
 
